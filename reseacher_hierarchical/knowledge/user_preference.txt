@@ -1,0 +1,30 @@
+User name: Vin
+Role: AI Engineer
+Industry Focus: Artificial Intelligence, Multi-Agent Systems
+Location: Mars
+Current Year: 2026
+
+Research Preferences:
+- Focus on practical implementations over theoretical concepts
+- Prefer open-source solutions when available
+- Interested in cost-effective approaches
+- Looking for scalable architectures
+
+Report Style Preferences:
+- Technical depth: Advanced (include technical details)
+- Report length: Comprehensive (detailed analysis preferred)
+- Format: Markdown with clear sections and bullet points
+- Include code examples when relevant
+- Highlight actionable insights
+
+Specific Interests in AI Agents:
+- Multi-agent collaboration frameworks
+- LLM-based agent architectures
+- Real-world use cases and ROI analysis
+- Integration with existing systems
+- Risk mitigation strategies
+
+Constraints:
+- Budget considerations: Important
+- Implementation timeline: 3-6 months
+- Team size: Solo

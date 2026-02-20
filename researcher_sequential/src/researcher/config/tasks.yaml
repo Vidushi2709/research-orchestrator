@@ -1,0 +1,75 @@
+research_task:
+  description: >
+    Conduct comprehensive research on {topic} to uncover the latest cutting-edge developments, 
+    emerging trends, and technological advancements. Gather information from credible sources 
+    including industry reports, academic papers, news articles, and expert opinions.
+    Focus on: recent innovations, market trends, key technological breakthroughs, and emerging patterns.
+  expected_output: >
+    A detailed research report (3-5 paragraphs) containing:
+    - Latest developments and innovations in {topic}
+    - Emerging trends and patterns
+    - Key data points and statistics
+    - Credible sources and references
+    - Timeline of recent significant events
+  agent: researcher
+
+competitive_analysis_task:
+  description: >
+    Analyze the competitive landscape of {topic} based on the research findings.
+    Identify key players who have solved similar problems and document their approaches.
+    Map out competitors, their solutions, strengths, weaknesses, market positioning, and strategies.
+    Evaluate their technological approaches, business models, and success factors.
+    Identify gaps in the market and potential opportunities for differentiation.
+  expected_output: >
+    A comprehensive competitive analysis report including:
+    - Detailed competitor profiles (at least 5-7 key players)
+    - Analysis of their solutions and approaches
+    - SWOT analysis for each major competitor
+    - Market share and positioning data
+    - Comparison matrix of key features/capabilities
+    - Identified market gaps and opportunities
+    - Strategic insights for competitive advantage
+  agent: reporting_analyst
+  context: [research_task]
+
+executive_summary_task:
+  description: >
+    Synthesize the competitive analysis report into a clear, concise executive summary.
+    Extract the most critical insights, key findings, and actionable recommendations.
+    Create a strategic roadmap with prioritized action items based on the competitive analysis.
+    Ensure the summary is accessible to non-technical stakeholders and decision-makers.
+    Focus on business impact, strategic opportunities, and recommended next steps.
+  expected_output: >
+    An executive summary document (2-3 pages) containing:
+    - Executive overview (1 paragraph)
+    - Top 5 key findings and insights
+    - Strategic implications for {topic}
+    - Actionable roadmap with 3-5 prioritized recommendations
+    - Timeline for implementation (short-term, mid-term, long-term)
+    - Expected business impact and ROI considerations
+    - Clear decision points for leadership
+  agent: executive_summary_analyst
+  context: [research_task, competitive_analysis_task]
+  output_file: 'executive_summary.md'
+
+risk_assessment_task:
+  description: >
+    Conduct a thorough risk assessment of the {topic} market landscape based on all previous analyses.
+    Identify potential risks, threats, and challenges that could impact market success.
+    Evaluate risks from: emerging competitors, technological disruptions, market shifts, 
+    regulatory changes, and competitive actions.
+    Assess the probability and potential impact of each identified risk.
+    Develop mitigation strategies and contingency plans.
+  expected_output: >
+    A comprehensive risk assessment report including:
+    - Risk matrix categorizing threats by probability and impact
+    - Detailed analysis of top 5-7 critical risks
+    - Assessment of technological, competitive, and market risks
+    - Potential impact on business objectives
+    - Risk mitigation strategies for each identified threat
+    - Early warning indicators to monitor
+    - Contingency plans and recommended safeguards
+    - Risk timeline showing when threats may materialize
+  agent: risk_assessment_analyst
+  context: [research_task, competitive_analysis_task, executive_summary_task]
+  output_file: 'risk_assessment.md'
